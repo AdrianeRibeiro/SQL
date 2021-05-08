@@ -1,0 +1,1 @@
+SELECT * FROM tabela_de_produtos WHERE sabor LIKE '%Maça%';
