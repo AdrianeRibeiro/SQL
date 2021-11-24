@@ -1,0 +1,11 @@
+SELECT * FROM vendas_sucos.PRODUTOS;
+
+DELETE FROM PRODUTOS WHERE CODIGO = '838819';
+
+SELECT CODIGO_DO_PRODUTO FROM sucos_vendas.tabela_de_produtos;
+
+SELECT CODIGO FROM vendas_sucos.PRODUTOS WHERE
+CODIGO NOT IN (SELECT CODIGO_DO_PRODUTO FROM sucos_vendas.tabela_de_produtos);
+
+DELETE FROM vendas_sucos.PRODUTOS WHERE 
+CODIGO NOT IN (SELECT CODIGO_DO_PRODUTO FROM sucos_vendas.tabela_de_produtos);
